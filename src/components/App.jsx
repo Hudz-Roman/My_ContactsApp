@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div>
-      <h1>Phonebook</h1>
+      <h1>My ContactsApp</h1>
       <div className={s.app_wrapper}>
         <div>
           <ContactForm />

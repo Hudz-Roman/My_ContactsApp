@@ -2,9 +2,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 5px;
-  margin-top: 25px;
-  max-width: 1215px;
+  gap: 10px;
+  margin-bottom: 25px 0 50px;
+  max-width: 1230px;
 }
 
 .loader_wrapper {

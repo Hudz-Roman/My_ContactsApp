@@ -11,11 +11,17 @@
 }
 
 .wrapper {
-  width: 600px;
+  width: 300px;
   border-radius: 10px;
   padding: 15px;
   background-color: #fff;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    width: 600px;
+  }
 }
 
 .input_field {

@@ -1,0 +1,14 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 25px;
+  max-width: 1215px;
+}
+
+.loader_wrapper {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+}

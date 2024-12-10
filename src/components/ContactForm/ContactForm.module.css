@@ -1,0 +1,39 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.wrapper {
+  width: 600px;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.input_field {
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.btn {
+  margin: 5px auto 0;
+  height: 35px;
+  background-color: #b6ccff;
+  border-radius: 10px;
+  padding: 0 10px;
+  border: none;
+}
+
+.error {
+  color: red;
+  font-size: 10px;
+}

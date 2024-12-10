@@ -1,0 +1,13 @@
+.wrapper {
+  margin-top: 15px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input_field {
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 10px;
+  padding: 5px;
+}

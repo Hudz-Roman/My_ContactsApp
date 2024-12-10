@@ -1,0 +1,30 @@
+.list_el {
+  width: 300px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.user_info_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.btn {
+  margin-left: auto;
+  height: 35px;
+  background-color: #b6ccff;
+  border-radius: 10px;
+  border: none;
+  padding: 0 10px;
+}
+
+.user_info {
+  display: flex;
+  gap: 5px;
+}

@@ -8,7 +8,7 @@ const SearchBox = () => {
     <div className={s.wrapper}>
       <span>Find contacts by name</span>
       <input
-        type='text'
+        type='search'
         placeholder='Search'
         onChange={(e) => dispatch(changeFilter(e.target.value))}
         className={s.input_field}

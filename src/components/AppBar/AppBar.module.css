@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  padding: 10px 25px;
+  background-color: #b6ccff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 1px solid rgb(204, 204, 204);
+  margin-bottom: 35px;
+}
+
+.nav_list {
+  display: flex;
+  gap: 40px;
+  margin-left: auto;
+}

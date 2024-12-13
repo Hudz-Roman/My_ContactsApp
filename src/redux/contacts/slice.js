@@ -22,7 +22,9 @@ const slice = createSlice({
       .addCase(addContact.fulfilled, (state, { payload }) => {
         state.items.unshift(payload);
       })
-      .addCase(logout.fulfilled, () => initialState)
+      .addCase(logout.fulfilled, () => {
+        return initialState;
+      })
       .addMatcher(
         isAnyOf(
           addContact.pending,

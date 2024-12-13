@@ -26,7 +26,9 @@ const slice = createSlice({
         state.token = action.payload.user.token;
         state.isLoggedIn = true;
       })
-      .addCase(logout.fulfilled, () => initialState);
+      .addCase(logout.fulfilled, () => {
+        return initialState;
+      });
   },
 });
 

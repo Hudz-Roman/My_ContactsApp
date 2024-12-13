@@ -1,0 +1,21 @@
+.nav_list {
+  display: flex;
+  gap: 40px;
+}
+
+.links {
+  color: rgb(99, 99, 99);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.links:hover,
+.links:focus {
+  scale: 1.35;
+  color: black;
+}
+
+.user_nav_list {
+  display: flex;
+  gap: 40px;
+}

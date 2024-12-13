@@ -1,0 +1,15 @@
+.wrapper {
+  padding-top: 150px;
+  margin: auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.home_title {
+  text-align: center;
+}
+
+.home_text {
+  font-size: 25px;
+  margin-top: 25px;
+}

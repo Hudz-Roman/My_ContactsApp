@@ -1,18 +1,21 @@
-import { NavLink } from 'react-router';
+import { useSelector } from 'react-redux';
+import Navigation from '../Navigation/Navigation';
 import s from './AppBar.module.css';
+import { selectIsLoggedIn, selectUser } from '../../redux/auth/selectors';
+import UserMenu from '../UserMenu/UserMenu';
+import AuthNav from '../AuthNav/AuthNav';
 
-const Header = () => {
+const AppBar = () => {
+  const isLoggedIn = useSelector(selectIsLoggedIn);
+  const user = useSelector(selectUser);
   return (
     <header className={s.wrapper}>
       <h1>My ContactsApp</h1>
-      <ul className={s.nav_list}>
-        <NavLink to='/'>Home</NavLink>
-        <NavLink to='/contacts'>Contacts</NavLink>
-        <NavLink to='/login'>Login</NavLink>
-        <NavLink to='/register'>Registration</NavLink>
-      </ul>
+      {isLoggedIn && <p>{user.email}</p>}
+      <Navigation />
+      {isLoggedIn ? <UserMenu /> : <AuthNav />}
     </header>
   );
 };
 
-export default Header;
+export default AppBar;

@@ -1,12 +1,49 @@
 import { ErrorMessage, Field, Formik, Form } from 'formik';
-import s from '../ContactForm/ContactForm.module.css';
+import s from '../FormStyles.module.css';
+import { useDispatch } from 'react-redux';
+import { register } from '../../redux/auth/operations';
+import { useNavigate } from 'react-router';
+import toast from 'react-hot-toast';
 
-const LoginForm = () => {
+const RegistrationForm = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const handleSubmit = (values, options) => {
+    dispatch(register(values))
+      .unwrap()
+      .then((res) => {
+        toast(`Welcome, ${res.user.name}`, {
+          icon: '👏',
+        });
+        navigate('/contacts');
+      })
+      .catch(() => {
+        toast.error('Something went wrong, try again');
+      });
+    options.resetForm();
+  };
+
+  const initialValues = {
+    name: '',
+    email: '',
+    password: '',
+  };
+
   return (
     <div className={s.wrapper}>
-      <Formik>
+      <Formik onSubmit={handleSubmit} initialValues={initialValues}>
         <Form className={s.form}>
-          <h2>Registration</h2>
+          <h2 className={s.form_title}>Registration</h2>
+          <label className={s.label}>
+            <span>Name</span>
+            <Field
+              name='name'
+              placeholder='Type your name'
+              type='text'
+              className={s.input_field}
+            />
+            <ErrorMessage name='name' component='span' className={s.error} />
+          </label>
           <label className={s.label}>
             <span>E-Mail</span>
             <Field
@@ -22,7 +59,7 @@ const LoginForm = () => {
             <Field
               name='password'
               placeholder='Type your password'
-              type='text'
+              type='password'
               className={s.input_field}
             />
             <ErrorMessage
@@ -40,4 +77,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default RegistrationForm;

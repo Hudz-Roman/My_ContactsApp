@@ -10,9 +10,8 @@ const AppBar = () => {
   const user = useSelector(selectUser);
   return (
     <header className={s.wrapper}>
-      <h1>My ContactsApp</h1>
-      {isLoggedIn && <p>{user.email}</p>}
       <Navigation />
+      {isLoggedIn && <p>{user.email}</p>}
       {isLoggedIn ? <UserMenu /> : <AuthNav />}
     </header>
   );

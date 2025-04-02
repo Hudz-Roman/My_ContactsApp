@@ -12,8 +12,17 @@ const LoginForm = () => {
     dispatch(login(values))
       .unwrap()
       .then((res) => {
-        toast(`Welcome, ${res.user.name}`, {
-          icon: '👏',
+        toast.success(`Welcome, ${res.user.name}`, {
+          style: {
+            border: '1px solid #b6ccff',
+            padding: '16px',
+            color: '#000',
+            width: '500px',
+          },
+          iconTheme: {
+            primary: '#b6ccff',
+            secondary: '#FFFAEE',
+          },
         });
         navigate('/contacts');
       })

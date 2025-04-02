@@ -3,11 +3,9 @@ import s from './Navigation.module.css';
 
 const Navigation = () => {
   return (
-    <ul className={s.nav_list}>
-      <NavLink className={s.links} to='/'>
-        Home
-      </NavLink>
-    </ul>
+    <NavLink className={s.mainLink} to='/'>
+      My ContactsApp
+    </NavLink>
   );
 };
 

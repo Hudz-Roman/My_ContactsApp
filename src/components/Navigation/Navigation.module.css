@@ -3,6 +3,13 @@
   gap: 40px;
 }
 
+.mainLink {
+  font-size: 25px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
 .links {
   color: rgb(99, 99, 99);
   text-decoration: none;
@@ -11,11 +18,12 @@
 
 .links:hover,
 .links:focus {
-  scale: 1.35;
+  scale: 1.15;
   color: black;
 }
 
 .user_nav_list {
   display: flex;
-  gap: 40px;
+  justify-content: space-between;
+  width: 160px;
 }
